@@ -35,7 +35,7 @@
     --Red-key-background-toggle: hsl(6, 63%, 50%);
     --Dark-red-key-shadow: hsl(6, 70%, 34%);
 
-    --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+    --Light-grayish-orange-key-background: hsl(30, 25%, 89%); 
     --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
 
 /* #### Text */
@@ -101,8 +101,11 @@ button{
     height: 6rem;
     border-radius: 8px;
     color: #fff;
-    font-size: 1.5rem;
-    padding: 3px 5px;
+    font-size: 3rem;
+    padding: 3px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 .calculator-keys{
@@ -126,19 +129,42 @@ button{
     /* box-shadow: 0 0 34px 0 red inset; */
     box-shadow:0 -5px 0 var(--Grayish-orange-key-shadow) inset;
 }
+
+.calculator-key:hover{
+    background-color: #fff
+}
+.delete-btn {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow:0 -5px 0 var(--Desaturated-dark-blue-key-shadow) inset;
+    color: #fff;
+}
+
+.delete-btn:hover{
+    background-color: var(--Desaturated-dark-blue-key-shadow);
+}
+
+
 .reset-btn {
     background-color: hsl(225, 21%, 49%);
     grid-column: span 2;
-    /* box-shadow: none; */
+    color: #fff;
     box-shadow:0 -5px 0 var(--Desaturated-dark-blue-key-shadow) inset;
-
 }
+
+.reset-btn:hover{
+    background-color: var(--Desaturated-dark-blue-key-shadow);
+}
+
 .equal-btn {
     background-color: var(--Red-key-background-toggle);
     grid-column: span 2;
     box-shadow: none;
     box-shadow:0 -5px 0 var(--Dark-red-key-shadow) inset;
+    color: #fff;
+}
 
+.equal-btn:hover{
+    background-color: var(--Dark-red-key-shadow);
 }
 
 /* Media Query */
