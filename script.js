@@ -1,12 +1,13 @@
 const screen = document.getElementById('screen')
 const keys = document.querySelector(".calculator-keys");
-
+const themeSlider = document.getElementById('theme-slider')
 
 keys.addEventListener('click',function(event){
     if(event.target.classList.contains('calculator-key')){
         handleKeyClick(event.target.textContent)
     }
 })
+
 
 function handleKeyClick(key) {
     switch (key) {
@@ -35,11 +36,19 @@ function clearScreen() {
 function appendToScreen(value) {
     screen.textContent += value;
 }
-
+    
 function calculateResult() {
     try {
-    screen.textContent = eval(screen.textContent);
+        let expression = screen.textContent
+
+        expression = expression.replace(/x/g, '*')
+    screen.textContent = eval(expression);
     } catch (error) {
     screen.textContent = "Error";
     }
+} 
+
+
+const themeToggle = () => {
+    console.log('This ')
 }
