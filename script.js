@@ -52,3 +52,12 @@ function calculateResult() {
 const themeToggle = () => {
     console.log('This ')
 }
+
+const toggleSwitch = document.getElementById('toggleSwitch');
+toggleSwitch.addEventListener('change', function() {
+if (this.checked) {
+    // Do something when switch is ON
+} else {
+    // Do something when switch is OFF
+}
+});

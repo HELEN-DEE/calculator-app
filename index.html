@@ -14,18 +14,29 @@
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Calculator app</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
   </head>
   <body>
     <main>
       <!-- CALCULATOR -->
       <section id="calculator">
+
         <!-- Top Level -->
-        <div class="top_level">
-          <h2>calc</h2>
-          <button class="slider" id="theme-slider">
-            <!-- -->
-        </button>
+        <div class="top-level">
+          <div class="flex top-level-mg">
+            <h2>calc</h2>
+          <div class="theme-slider flex">
+            <h3 class="flex-center">Theme</h3>
+            <div class="switch ">
+              <label for="number" class="number-stages">1 2 3</label>
+              <input type="checkbox" id="toggleSwitch" class="sr-only">
+              <label for="toggleSwitch" class="switch-label">
+                <span class="switch-inner"></span>
+                <span class="switch-switch"></span>
+              </label>
+            </div>
+          </div>
+          </div>
         <!-- Screen -->
         <div class="calculator-screen" id="screen">1234567890</div>
 
@@ -47,7 +58,7 @@
           <button class="calculator-key">.</button>
           <button class="calculator-key">0</button>
           <button class="calculator-key">/</button>
-          <button class="calculator-key">X</button>
+          <button class="calculator-key">x  </button>
           <button class="calculator-key reset-btn">RESET</button>
           <button class="calculator-key equal-btn">=</button>
         </div>
