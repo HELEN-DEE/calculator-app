@@ -63,7 +63,7 @@
 /* Body Styles */
 body {
   font-family: 'League Spartan', sans-serif;
-  background-color: var(--main-background-color);
+  /* background-color: var(--main-background-color); */
   overflow-y: hidden;
 }
 
