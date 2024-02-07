@@ -223,7 +223,7 @@ button {
 .delete-btn {
   background-color: hsl(225, 21%, 49%);
   box-shadow: 0 -5px 0 var(--action-button-shadow) inset;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .delete-btn:hover {
@@ -235,7 +235,7 @@ button {
   background-color: hsl(225, 21%, 49%);
   grid-column: span 2;
   color: #fff;
-  box-shadow: 0 -5px 0 var(--action-button-shadow) inset;
+  /* box-shadow: 0 -5px 0 var(--action-button-shadow) inset; */
 }
 
 .reset-btn:hover {
