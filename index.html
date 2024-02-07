@@ -13,32 +13,40 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Calculator app</title>
-
-
   </head>
   <body>
     <main>
       <!-- CALCULATOR -->
       <section id="calculator">
-
         <!-- Top Level -->
-        <div class="top-level">
-          <div class="flex top-level-mg">
-            <h2>calc</h2>
-          <div class="theme-slider flex">
-            <h3 class="flex-center">Theme</h3>
-            <div class="switch ">
-              <label for="number" class="number-stages">1 2 3</label>
-              <input type="checkbox" id="toggleSwitch" class="sr-only">
-              <label for="toggleSwitch" class="switch-label">
-                <span class="switch-inner"></span>
-                <span class="switch-switch"></span>
-              </label>
+        <div class="top-level flex_ai-c_jc-sb">
+          <h2>calc</h2>
+          <!-- Theme Slider -->
+          <div class="theme-slider flex-center">
+            <p>Theme</p>
+            <div>
+              <div class="theme-number flex_ai-c_jc-sb">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+              <div class="theme-switch" id="theme-switch">
+                <!-- Theme 1 -->
+                <input type="radio" name="switch" id="theme-1" checked />
+                <label for="theme-1"></label>
+                <!-- Theme 2 -->
+                <input type="radio" name="switch" id="theme-2" />
+                <label for="theme-2"></label>
+                <!-- Theme 3 -->
+                <input type="radio" name="switch" id="theme-3" />
+                <label for="theme-3"></label>
+                <span class="slider"></span>
+              </div>
             </div>
           </div>
-          </div>
+        </div>
         <!-- Screen -->
-        <div class="calculator-screen" id="screen">1234567890</div>
+        <div class="calculator-screen" id="screen">0</div>
 
         <!-- Keys -->
 
@@ -58,7 +66,7 @@
           <button class="calculator-key">.</button>
           <button class="calculator-key">0</button>
           <button class="calculator-key">/</button>
-          <button class="calculator-key">x  </button>
+          <button class="calculator-key">x</button>
           <button class="calculator-key reset-btn">RESET</button>
           <button class="calculator-key equal-btn">=</button>
         </div>
