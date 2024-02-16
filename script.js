@@ -34,14 +34,6 @@ function clearScreen() {
   screen.textContent = '';
 }
 
-// Append value to the screen while limiting the length to 16 characters
-function appendToScreen(value) {
-  // Check if the length of the screen content plus the new value exceeds 16 characters
-  if (screen.textContent.length + value.length <= 16) {
-    screen.textContent += value;
-  }
-}
-
 // Calculate the result of the expression on the screen
 function calculateResult() {
   try {
@@ -57,6 +49,19 @@ function calculateResult() {
     screen.textContent = 'Error';
   }
 }
+
+//  Value length to the calculator screen
+function appendToScreen(value) {
+
+  let viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+
+  let maxLength = (viewportWidth < 450) ? 10 : 15; 
+
+  if (screen.textContent.length + value.length <= maxLength) {
+    screen.textContent += value;
+  }
+}
+
 
 // Toggle theme based on user selection
 let toggleTheme = () => {
@@ -75,4 +80,4 @@ let toggleTheme = () => {
 
 themeSlider[0].addEventListener('change', toggleTheme);
 themeSlider[1].addEventListener('change', toggleTheme);
-themeSlider[2].addEventListener('change', toggleTheme);
+themeSlider[2].addEventListener('change', toggleTheme); 
